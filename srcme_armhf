@@ -1,0 +1,17 @@
+DEFAULT_HOSTNAME=pim17
+DEFAULT_ROOT_PASSWORD=m17project
+SIZE_DATA=32M
+SIZE_BOOT=128M
+SIZE_ROOT_FS=512M
+SIZE_ROOT_PART=2G
+ALPINE_BRANCH=edge
+#keep all kernel modules
+DEFAULT_KERNEL_MODULES=*
+#otherwise add additional ones besides the regular defaults here:
+#ADDITIONAL_KERNEL_MODULES=
+#ADDITIONAL_DIR_KERNEL_MODULES=usb
+
+ARCH=armhf
+#pi0
+
+IMG_NAME=pim17_armhf_edge

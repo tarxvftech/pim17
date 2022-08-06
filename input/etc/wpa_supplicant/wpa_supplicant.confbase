@@ -1,0 +1,27 @@
+#WARNING: automatically created file. Will be overwritten at boot.
+#Add extra stanzas to /boot/wpa_supplicant_additions.txt (the first partition on disk) 
+# or change the defaults at /data/etc/wpa_supplicant.confbase
+
+eapol_version=1
+ap_scan=1
+fast_reauth=1
+p2p_disabled=1
+
+#scan_freq=2412 2437 2462 
+#can only be put in a network block
+#freq_list=2412 2437 2462 
+
+network={
+	ssid="🐖📻"
+	#pig (ham) radio
+	psk="m17project"
+	priority=599
+	}
+network={
+	ssid="📡"
+	#satellite antenna
+	psk="m17project"
+	priority=599
+}
+
+## Below here is added from /boot/wpa_supplicant_additions.txt before wpa_supplicant starts (see wifi_adder service)

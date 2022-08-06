@@ -1,0 +1,7 @@
+:80 {
+	encode zstd gzip
+	log
+	root * /srv/http/
+	file_server browse
+}
+

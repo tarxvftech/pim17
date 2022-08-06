@@ -1,0 +1,27 @@
+ _______  __ __       __   __   ________ 
+|       \|  \  \     /  \_/  \ |        \
+| ▓▓▓▓▓▓▓\\▓▓ ▓▓\   /  ▓▓   ▓▓  \▓▓▓▓▓▓▓▓
+| ▓▓__/ ▓▓  \ ▓▓▓\ /  ▓▓▓\▓▓▓▓     /  ▓▓ 
+| ▓▓    ▓▓ ▓▓ ▓▓▓▓\  ▓▓▓▓ | ▓▓    /  ▓▓  
+| ▓▓▓▓▓▓▓| ▓▓ ▓▓\▓▓ ▓▓ ▓▓ | ▓▓   /  ▓▓   
+| ▓▓     | ▓▓ ▓▓ \▓▓▓| ▓▓_| ▓▓_ /  ▓▓    
+| ▓▓     | ▓▓ ▓▓  \▓ | ▓▓   ▓▓ \  ▓▓     
+ \▓▓      \▓▓\▓▓      \▓▓\▓▓▓▓▓▓\▓▓      
+                                         
+Welcome to PiM17, the ham radio linux distribution with a focus on M17.
+It's something like pi-star, but leaner, cleaner, and a little less friendly.
+(It's friendly enough, it just doesn't have a GUI - but you'll feel more at home here than pi-star if you're a linux user)
+Created and maintained by tarxvf <https://tarxvf.tech>.
+
+Thanks to work by a great many others, including but not limited to the Alpine
+community, the members of the M17 Project, and contributors like you.
+Thank you!
+
+The Alpine Wiki contains a large amount of how-to guides and general
+information about administrating Alpine systems.  See <http://wiki.alpinelinux.org/>.
+
+For more information on M17 and this distribution, see 
+<https://M17Project.org> and make sure to join the Matrix/Discord/IRC bridged chat.
+
+#TODO: PiM17 itself is hosted at <https://github.com/tarxvftech/pim17> and <https://git.mmcginty.me/mike/pim17>.
+

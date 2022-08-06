@@ -1,0 +1,32 @@
+# Contributor:
+# Maintainer:
+pkgname=mmdvmcal
+pkgver=0.0.0
+pkgrel=1
+pkgdesc="MMDVMCal - Calibration program for MMDVM and MMDVM_HS"
+url="https://github.com/g4klx/MMDVMCal"
+arch="all"
+license="gplv2"
+depends=""
+makedepends="linux-headers"
+install=""
+#subpackages="$pkgname-dev $pkgname-doc"
+source=""
+builddir="$srcdir/"
+
+build() {
+	git clone --depth 1 https://github.com/g4klx/MMDVMCal.git src
+	cd src; make
+}
+
+check() {
+	echo check
+}
+
+package() {
+	cd src;
+	#make DESTDIR="$pkgdir" install
+	mkdir -p "$pkgdir"/usr/bin/
+	install -m755 -D "$srcdir"/src/MMDVMCal  "$pkgdir"/usr/bin/
+}
+

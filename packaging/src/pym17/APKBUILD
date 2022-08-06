@@ -1,0 +1,28 @@
+# Contributor:
+# Maintainer:
+pkgname=pym17
+pkgver=
+pkgrel=0
+pkgdesc=""
+url=""
+arch="all"
+license=""
+depends="python3"
+makedepends="py3-setuptools"
+install=""
+subpackages="$pkgname-dev $pkgname-doc"
+source=""
+builddir="$srcdir/"
+
+build() {
+	python3 setup.py build
+}
+
+check() {
+	python3 setup.py test
+}
+
+package() {
+	python3 setup.py install --prefix=/usr --root="$pkgdir"
+}
+

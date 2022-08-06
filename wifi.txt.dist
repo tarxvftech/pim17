@@ -1,0 +1,7 @@
+
+network={
+	ssid="Sperry"
+	psk="fingerprints on the moon"
+	#priority=600
+	#freq_list=2412 2437 2462 
+}

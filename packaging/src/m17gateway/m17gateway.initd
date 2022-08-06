@@ -1,0 +1,15 @@
+#!/sbin/openrc-run
+
+name=m17gateway
+command="/usr/bin/M17Gateway"
+command_args=""
+command_background="yes"
+
+start_stop_daemon_args=""
+pidfile="/run/m17gateway.pid"
+
+depend() {
+	need net
+	after firewall
+}
+

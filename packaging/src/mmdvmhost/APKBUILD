@@ -1,0 +1,52 @@
+# Contributor:
+# Maintainer: 
+pkgname=mmdvmhost
+pkgver=0.0.3
+pkgrel=1
+pkgdesc="MMDVMHost"
+url="https://localhost/"
+arch="all"
+license="gplv2"
+depends=""
+makedepends="linux-headers"
+install="$pkgname.pre-install $pkgname.post-install"
+#subpackages="$pkgname-dev $pkgname-doc"
+source="
+	mmdvmhost.initd
+	mmdvmhost.confd
+	"
+builddir="$srcdir/"
+
+build() {
+	git clone --depth 1 https://github.com/g4klx/mmdvmhost.git src
+	cd src
+	#./configure \
+	#	--build=$CBUILD \
+	#	--host=$CHOST \
+	#	--prefix=/usr \
+	#	--sysconfdir=/etc \
+	#	--mandir=/usr/share/man \
+	#	--localstatedir=/var
+	make
+}
+
+check() {
+	#make check
+	echo check
+}
+
+package() {
+	#make DESTDIR="$pkgdir" install
+	mkdir -p "$pkgdir"/usr/bin/
+	install -m755 -D "$srcdir"/src/MMDVMHost  "$pkgdir"/usr/bin/
+	mkdir -p "$pkgdir"/usr/share/MMDVMHost/examples/
+	install -m644 -D "$srcdir"/src/MMDVM.ini  "$pkgdir"//usr/share/MMDVMHost/examples/
+
+	install -m755 -D "$srcdir"/$pkgname.initd  "$pkgdir"/etc/init.d/$pkgname
+	install -m644 -D "$srcdir"/$pkgname.confd  "$pkgdir"/etc/conf.d/$pkgname
+}
+
+sha512sums="
+d1dee1190eb96ad4c5659ccfc76ced0737ea2998a47a5a5fb4900b621fd8b8538024d798d8d6cc3bd6b415b41353951b1416897e8442f010bd9e8884d5417ef0  mmdvmhost.initd
+f11f0d192cd7823307c2ce4ddc7b3fff5190f72d3f65a5524b487021a95a222aca1fd36ab1eb58ed533e7acd555bfb70f0c8a13db20338ea31527f3151fd2bd7  mmdvmhost.confd
+"

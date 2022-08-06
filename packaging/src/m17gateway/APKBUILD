@@ -1,0 +1,55 @@
+# Contributor:
+# Maintainer:
+pkgname=m17gateway
+pkgver=0.0.3
+pkgrel=1
+pkgdesc="M17 Gateway"
+url="https://github.com/g4klx/m17gateway"
+arch="all"
+license="GPLv2"
+depends=""
+makedepends="linux-headers"
+install="$pkgname.pre-install $pkgname.post-install"
+#subpackages="$pkgname-dev $pkgname-doc"
+source="
+	m17gateway.initd
+	m17gateway.confd
+	"
+builddir="$srcdir/"
+
+build() {
+	git clone --depth 1 $url src/ && cd src
+	sed -i 's/M17HOSTSPATH=.*/M17HOSTSPATH=\/data\/etc/' M17HostsUpdate.sh
+
+	#./configure \
+	#	--build=$CBUILD \
+	#	--host=$CHOST \
+	#	--prefix=/usr \
+	#	--sysconfdir=/etc \
+	#	--mandir=/usr/share/man \
+	#	--localstatedir=/var
+	make
+}
+
+check() {
+	#make check
+	echo check
+}
+
+package() {
+	mkdir -p "$pkgdir"/usr/bin/
+	install -m755 -D "$srcdir"/src/M17Gateway "$pkgdir"/usr/bin/
+	install -m755 -D "$srcdir"/src/M17HostsUpdate.sh "$pkgdir"/usr/bin/
+
+	mkdir -p "$pkgdir"/usr/share/M17Gateway/examples/
+	install -m644 -D "$srcdir"/src/M17Gateway.ini  "$pkgdir"/usr/share/M17Gateway/examples/
+	install -m755 -D "$srcdir"/$pkgname.initd "$pkgdir"/etc/init.d/$pkgname
+	install -m644 -D "$srcdir"/$pkgname.confd "$pkgdir"/etc/conf.d/$pkgname
+
+	mkdir -p "$pkgdir"/etc/M17Gateway/
+	cp -r "$srcdir"/src/Audio -t "$pkgdir"/etc/M17Gateway/
+	chmod 644 -R "$pkgdir"/etc/M17Gateway
+}
+
+sha512sums="1c357f4d815c4d7f060ea1be30ba5545858a1a2a66ca8ab44279929472fd6207cac93b0d9d27caca3987e60964fba7c3943e9cf25c9ea77b8b464712ab6d6256  m17gateway.initd
+f11f0d192cd7823307c2ce4ddc7b3fff5190f72d3f65a5524b487021a95a222aca1fd36ab1eb58ed533e7acd555bfb70f0c8a13db20338ea31527f3151fd2bd7  m17gateway.confd"
