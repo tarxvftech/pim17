@@ -4,6 +4,12 @@
 ## Built with
 https://github.com/raspi-alpine/builder
 
+You'll need docker. You need to `make qemu` to register cross-arch support.
+Everything builds in docker. Makefiles are where to start.
+
+
+
+# unsorted and unedited nonsense below here
 
 ## TODO
 make MMDVM packages
@@ -20,8 +26,8 @@ make MMDVM packages
  stm32-dvm - make dvm 
 
  M17Gateway - hostupdate script needs to have paths set
- add curl lol
- make sane default sfor M17Gateway
+✔ add curl lol
+✔ make sane default sfor M17Gateway
  TXInvert required for mmdvmhost
 
 
