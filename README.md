@@ -4,8 +4,15 @@
 ## Built with
 https://github.com/raspi-alpine/builder
 
+more specifically, built with my fork of it:
+
+https://github.com/tarxvftech/pim17_builder
+
+## Developers
 You'll need docker. You need to `make qemu` to register cross-arch support.
 Everything builds in docker. Makefiles are where to start.
+
+git clone the fork pim17_builder to builder/ in this directory if you want to develop. 
 
 
 
