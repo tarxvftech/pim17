@@ -1,3 +1,5 @@
 _Dockerfile*
 upstream/
 packages
+.*.swp
+.*.swo

@@ -23,6 +23,9 @@ build() {
 		--mandir=/usr/share/man \
 		--localstatedir=/var
 	make
+	# apk add stm32flash
+	# get binary for hotspot image like from `make hs`
+	# equivalent of `make mmdvm_hs_hat`
 }
 
 check() {

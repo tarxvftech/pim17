@@ -1,0 +1,37 @@
+# Contributor: 
+# Maintainer:
+pkgname=mmdvm_easyflash
+pkgver=0.0.1
+pkgrel=0
+pkgdesc="Best way to flash a limited subset of MMDVM modems and hotspots"
+url="https://git.mmcginty.me/mike/mmdvm_easyflash.git"
+arch="noarch"
+license="AGPL3"
+depends="python3 py3-pyserial py3-semver"
+makedepends="py3-setuptools py3-pip py3-build py3-installer"
+checkdepends="py3-pytest"
+install=""
+subpackages=""
+source="$pkgname-$pkgver.tar.gz::https://git.mmcginty.me/mike/mmdvm_easyflash/archive/master.tar.gz"
+builddir="$srcdir/$pkgname"
+
+#use https://git.alpinelinux.org/aports/tree/community/py3-rich/APKBUILD as a guide
+build() {
+	cd $builddir
+	ls -latr
+	pwd
+	python3 -m build
+}
+
+
+package() {
+	mkdir -p $pkgdir
+	cd $builddir
+	ls -altr dist/
+	python3 -m installer -d "$pkgdir" dist/$pkgname-$pkgver-py3-none-any.whl
+	
+}
+
+sha512sums="
+26f3232d6538ff627d57a872c597ecc09d82de6a2fa04507586fdc765667d584b5fd49ec15568bb1fa9f5c6d05515fb8c67de030c141f77aed1b0be059346ab9  mmdvm_easyflash-0.0.1.tar.gz
+"

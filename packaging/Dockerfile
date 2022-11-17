@@ -4,7 +4,7 @@
 #as base
 RUN adduser builder -D #-D is don't assign a password
 RUN echo -e "m17project\nm17project\n" | passwd builder
-RUN adduser builder wheel
+RUN addgroup builder wheel
 RUN apk add alpine-sdk git screen vim doas sudo 
 
 #for MMDVM firmware
@@ -14,6 +14,7 @@ RUN apk add cmake
 
 RUN addgroup builder abuild
 RUN echo "permit persist :wheel" >> /etc/doas.conf
+RUN echo "%wheel ALL=(ALL) NOPASSWD: ALL " >> /etc/sudoers
 
 COPY --chown=builder ./abuild /home/builder/.abuild
 COPY --chown=root ./abuild /root/.abuild

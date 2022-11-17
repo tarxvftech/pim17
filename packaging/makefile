@@ -23,6 +23,12 @@ dev:
 		-v "$(PWD)"/packages:/home/builder/packages \
 		-v "$(PWD)"/abuild:/home/builder/.abuild \
 		pim17:x86_64 sh 
+devarm:
+	sudo docker run --rm -it \
+		-v "$(PWD)"/src:/src \
+		-v "$(PWD)"/packages:/home/builder/packages \
+		-v "$(PWD)"/abuild:/home/builder/.abuild \
+		pim17:aarch64 sh 
 run:
 	sudo mkdir -p packages/src
 	sudo docker run --rm -it \

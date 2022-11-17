@@ -1,3 +1,73 @@
+# Cross platform packaging environment for pim17 (alpine)
+
+pim17 is built on Alpine Linux, which is a fairly minimal
+distribution.  There aren't really cross compilation toolchains,
+the easiest way to build packages for another platform is actually
+to use qemu and emulate that platform.  Through some docker and
+[binfmt_misc](https://en.wikipedia.org/wiki/Binfmt_misc) trickery,
+we can run all these cross-platform build systems in docker on an x64 device.
+
+With this, we can kind-of ignore architecture and just build
+stuff. Granted, we rebuild it for each architecture, but that's not
+really avoidable until the great WASM consumes us all.
+
+So, let's build some packages.
+
+## Getting Started
+
+TODO: Need to document [generating signing
+keys](https://wiki.alpinelinux.org/wiki/Abuild_and_Helpers#Setting_up_the_build_environment).
+Hopefully with that link you can sort it out. The `./abuild` directory
+contains both keys and `./abuild/abuild.conf` has a reference to the
+privkey.
+
+First, register cross-platform binary support:
+```
+make qemu
+```
+
+Second, build your build images images. 
+```
+make img
+```
+
+Now you have a pile of container images, all the same alpine build
+image but for different architectures. Because you did `make qemu`
+you can run these like any regular same-arch container.
+
+To build all packages, just `make run`. This uses `src/buildall.sh`
+in each build image. All buildall.sh does is cd to each dir in
+src/ and run `abuild -r`, which is the alpine [package build
+system](https://wiki.alpinelinux.org/wiki/Creating_an_Alpine_package).
+
+After a build run, you should have packages in `./packages/src`
+in their respective directories. You can publish these to an
+HTTP server like in the recipe for `make prod` that I use. The
+full path of an alpine package URL looks something like
+`host.domain/alpine_version/arch/whatever-ve.rs.ion-rrev.apk`
+and if that's not enough, make sure to checkout the
+[docs](https://wiki.alpinelinux.org/wiki/Repositories).
+
+## Editing build images
+Check out the makefile to see how it's done. Generally you can just
+edit Dockerfile. The makefile may need to be adjusted if you need to
+add something specific to an architecture.
+
+
+
+## Running
+Packages you probably want:
+* dfu-util dfu-util [requires testing repo]
+* stm32flash (stm32flash) 
+* stlink (st-flash) [? also testing repo maybe]
+* ╳ upload-reset (doesn't exist outside stm32duino?)
+
+If you're running pim17 images, you already have these installed by default.
+If you're using the mmdvm_easyflash package, some may be pulled in as a dependency automatically.
+
+
+
+
 ## Add:
 # https://wiki.alpinelinux.org/wiki/Creating_an_Alpine_package
 * Kiosk package with firefox kiosk mode
