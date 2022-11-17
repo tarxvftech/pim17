@@ -74,7 +74,22 @@ if you need to.
 
 I _think_ ethernet is set to DHCP by default but I'd have to check.
 
+## Usage
 
+To log in, `ssh root@pim17`, password is `m17project`. Make sure to change
+that, copy SSH keys over, etc. doas or sudo are your own problem for
+now but I do intend to add a non-root user with doas support eventually.
+
+To install packages, it's standard alpine linux. See packaging/ for
+custom packages until they get broken out into their own repos.
+
+You'll have to `mount -o remount,rw /` to remount the root partition
+read-write to change settings. `/data` is rw by default and many things in
+/etc/ have a symlink to /data. This should make a system reasonably safe
+against power loss while still allowing easy config file editing and such.
+
+I'd prefer an overlay file system but don't remember why I didn't do
+that to begin with. Not sure I tried, but we should look into that!
 
 # unsorted and unedited nonsense below here
 
