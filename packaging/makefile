@@ -36,18 +36,17 @@ run:
 		-v "$(PWD)"/packages:/home/builder/packages \
 		-v "$(PWD)"/abuild:/home/builder/.abuild \
 		pim17:armhf sh /src/buildall.sh
-
-	#sudo docker run --rm -it \
+	sudo docker run --rm -it \
 		-v "$(PWD)"/src:/src \
 		-v "$(PWD)"/packages:/home/builder/packages \
 		-v "$(PWD)"/abuild:/home/builder/.abuild \
 		pim17:armv7 sh /src/buildall.sh
-	#sudo docker run --rm -it \
+	sudo docker run --rm -it \
 		-v "$(PWD)"/src:/src \
 		-v "$(PWD)"/packages:/home/builder/packages \
 		-v "$(PWD)"/abuild:/home/builder/.abuild \
 		pim17:aarch64 sh /src/buildall.sh
-	#sudo docker run --rm -it \
+	sudo docker run --rm -it \
 		-v "$(PWD)"/src:/src \
 		-v "$(PWD)"/packages:/home/builder/packages \
 		-v "$(PWD)"/abuild:/home/builder/.abuild \

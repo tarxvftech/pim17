@@ -22,7 +22,7 @@ chroot_exec apk add --no-cache git \
 	wireless-tools wpa_supplicant \
 	busybox-ifupdown busybox-extras \
 	linux-firmware-cypress \
-	mmdvmhost mmdvmcal m17gateway 
+	mmdvmhost mmdvmcal m17gateway mmdvm_easyflash
 
 mkdir -p $DATAFS_PATH/etc/wpa_supplicant 
 cp -r $ROOTFS_PATH/etc/wpa_supplicant/* $DATAFS_PATH/etc/wpa_supplicant/ 

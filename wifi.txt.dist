@@ -1,4 +1,12 @@
 
+
+#lines starting with a '#' are ignored
+#ssid is your wifi name, psk is your password
+#standard wpa_supplicant syntax if you want something fancy
+#priorities allow you to default to home network when home, and
+#auto-connect to your phone wifi when out of the house while still
+#reconnecting to home when you get home.
+
 network={
 	ssid="Sperry"
 	psk="fingerprints on the moon"
