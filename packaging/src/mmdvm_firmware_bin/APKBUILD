@@ -2,7 +2,7 @@
 # Maintainer:
 pkgname=mmdvm_firmware_bin
 pkgver=v1.6.0
-pkgrel=0
+pkgrel=1
 pkgdesc="Convenient MMDVM modem firmware images (stored in /srv/fw/)"
 url="https://github.com/tarxvftech/MMDVM_HS_CICD"
 arch="noarch"
@@ -11,7 +11,7 @@ depends=""
 makedepends=""
 install=""
 subpackages=""
-source="https://github.com/tarxvftech/MMDVM_HS_CICD/releases/download/v1.6.0-pre.1%2Bbuild.1/all.built.images.no.elf.zip"
+source="https://github.com/tarxvftech/MMDVM_HS_CICD/releases/download/v1.6.0-pre.2%2Bbuild1/all.built.images.no.elf.zip"
 builddir="$srcdir/"
 
 copy_and_create_as_needed(){
@@ -31,5 +31,5 @@ package() {
 }
 
 sha512sums="
-5eadaa7ca8bbf7aade5930ae6169764c1afc9bec79896bf395ea59835e3f0f4d661d24dd8d8d5f5af3963f5a58345606a9e8cc987c0bbd666665b1a2f16a1509  all.built.images.no.elf.zip
+ea5af3c1082f77a2d7714820d99cb5e30e084dc39b65704b2ecb8a95605b92ae0e0fff3fc25002d7f362d021f9f43eaf84ee19684fa7a21e71b7844913eab165  all.built.images.no.elf.zip
 "
