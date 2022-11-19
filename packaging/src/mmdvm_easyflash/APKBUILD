@@ -1,13 +1,14 @@
 # Contributor: 
 # Maintainer:
 pkgname=mmdvm_easyflash
-pkgver=0.0.1
+pkgver=0.0.4
+#NOTE: Must match what's in pyproject.toml!
 pkgrel=0
 pkgdesc="Best way to flash a limited subset of MMDVM modems and hotspots"
 url="https://git.mmcginty.me/mike/mmdvm_easyflash.git"
 arch="noarch"
 license="AGPL3"
-depends="python3 py3-pyserial py3-semver"
+depends="python3 py3-pyserial py3-semver stm32flash"
 makedepends="py3-setuptools py3-pip py3-build py3-installer"
 checkdepends="py3-pytest"
 install=""
@@ -33,5 +34,5 @@ package() {
 }
 
 sha512sums="
-26f3232d6538ff627d57a872c597ecc09d82de6a2fa04507586fdc765667d584b5fd49ec15568bb1fa9f5c6d05515fb8c67de030c141f77aed1b0be059346ab9  mmdvm_easyflash-0.0.1.tar.gz
+340bc09689536dbcf38035fce5c04ddda62a648a327c5022190b4ab8d56dbb42d297957d66d07d97c1bab020527fb4e337f94842371775bb758948d982c8c0a6  mmdvm_easyflash-0.0.4.tar.gz
 "

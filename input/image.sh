@@ -5,6 +5,9 @@ echo Root FS: $ROOTFS_PATH
 echo Boot FS: $BOOTFS_PATH
 echo Data FS: $DATAFS_PATH
 
+mkdir -p $DATAFS_PATH/srv
+#mv $ROOTFS_PATH/srv/* $DATAFS_PATH/srv/
+rmdir $ROOTFS_PATH/srv
 ln -s $DATAFS_PATH/srv $ROOTFS_PATH/srv
 mkdir -p $DATAFS_PATH/srv/http/
 #wget https://m17-protocol-specification.readthedocs.io/_/downloads/en/latest/htmlzip/ -o $DATAFS_PATH/srv/http/
@@ -22,7 +25,7 @@ chroot_exec apk add --no-cache git \
 	wireless-tools wpa_supplicant \
 	busybox-ifupdown busybox-extras \
 	linux-firmware-cypress \
-	mmdvmhost mmdvmcal m17gateway mmdvm_easyflash
+	mmdvmhost mmdvmcal m17gateway mmdvm_easyflash mmdvm_firmware_bin
 
 mkdir -p $DATAFS_PATH/etc/wpa_supplicant 
 cp -r $ROOTFS_PATH/etc/wpa_supplicant/* $DATAFS_PATH/etc/wpa_supplicant/ 

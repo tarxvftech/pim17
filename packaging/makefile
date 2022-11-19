@@ -14,8 +14,8 @@ img:
 	cat Dockerfile >> _Dockerfile.x86_64
 	sudo docker build . -f _Dockerfile.x86_64 -t pim17:x86_64
 	sudo docker build . -f _Dockerfile.aarch64 -t pim17:aarch64
-	sudo docker build . -f _Dockerfile.armv7 -t pim17:armv7
 	sudo docker build . -f _Dockerfile.armhf -t pim17:armhf
+	#sudo docker build . -f _Dockerfile.armv7 -t pim17:armv7
 
 dev:
 	sudo docker run --rm -it \
@@ -31,16 +31,12 @@ devarm:
 		pim17:aarch64 sh 
 run:
 	sudo mkdir -p packages/src
+	sudo chown mike:mike -R packages
 	sudo docker run --rm -it \
 		-v "$(PWD)"/src:/src \
 		-v "$(PWD)"/packages:/home/builder/packages \
 		-v "$(PWD)"/abuild:/home/builder/.abuild \
 		pim17:armhf sh /src/buildall.sh
-	sudo docker run --rm -it \
-		-v "$(PWD)"/src:/src \
-		-v "$(PWD)"/packages:/home/builder/packages \
-		-v "$(PWD)"/abuild:/home/builder/.abuild \
-		pim17:armv7 sh /src/buildall.sh
 	sudo docker run --rm -it \
 		-v "$(PWD)"/src:/src \
 		-v "$(PWD)"/packages:/home/builder/packages \
@@ -51,6 +47,11 @@ run:
 		-v "$(PWD)"/packages:/home/builder/packages \
 		-v "$(PWD)"/abuild:/home/builder/.abuild \
 		pim17:x86_64 sh /src/buildall.sh
+	#sudo docker run --rm -it \
+	#	-v "$(PWD)"/src:/src \
+	#	-v "$(PWD)"/packages:/home/builder/packages \
+	#	-v "$(PWD)"/abuild:/home/builder/.abuild \
+	#	pim17:armv7 sh /src/buildall.sh
 qemu:
 	sudo docker run --rm --privileged multiarch/qemu-user-static --reset -p yes --credential yes
 

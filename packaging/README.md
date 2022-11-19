@@ -54,7 +54,6 @@ edit Dockerfile. The makefile may need to be adjusted if you need to
 add something specific to an architecture.
 
 
-
 ## Running
 Packages you probably want:
 * dfu-util dfu-util [requires testing repo]

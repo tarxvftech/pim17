@@ -19,6 +19,7 @@ RUN echo "%wheel ALL=(ALL) NOPASSWD: ALL " >> /etc/sudoers
 COPY --chown=builder ./abuild /home/builder/.abuild
 COPY --chown=root ./abuild /root/.abuild
 COPY --chown=root ./abuild/*.pub /etc/apk/keys/
+RUN echo "/home/builder/packages/src/" >> /etc/apk/repositories
 WORKDIR /src
 USER builder
 #RUN git clone https://gitlab.alpinelinux.org/alpine/aports.git  /home/builder/aports

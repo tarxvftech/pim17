@@ -1,38 +1,35 @@
 # Contributor:
 # Maintainer:
 pkgname=mmdvm_firmware_bin
-pkgver=
+pkgver=v1.6.0
 pkgrel=0
-pkgdesc=""
-url=""
-arch="all"
-license=""
+pkgdesc="Convenient MMDVM modem firmware images (stored in /srv/fw/)"
+url="https://github.com/tarxvftech/MMDVM_HS_CICD"
+arch="noarch"
+license="GPLv2"
 depends=""
 makedepends=""
 install=""
-subpackages="$pkgname-dev $pkgname-doc"
-source=""
+subpackages=""
+source="https://github.com/tarxvftech/MMDVM_HS_CICD/releases/download/v1.6.0-pre.1%2Bbuild.1/all.built.images.no.elf.zip"
 builddir="$srcdir/"
 
-build() {
-	./configure \
-		--build=$CBUILD \
-		--host=$CHOST \
-		--prefix=/usr \
-		--sysconfdir=/etc \
-		--mandir=/usr/share/man \
-		--localstatedir=/var
-	make
-	# apk add stm32flash
-	# get binary for hotspot image like from `make hs`
-	# equivalent of `make mmdvm_hs_hat`
+copy_and_create_as_needed(){
+	src="$1"
+	dst="$2"
+	mkdir -p "$2"
+	cp -r "$src" "$dst"
 }
-
-check() {
-	make check
-}
-
 package() {
-	make DESTDIR="$pkgdir" install
+	prefix="/usr/share/mmdvm_firmware_bin"
+	mkdir -p "$pkgdir"
+	ls -latr $srcdir
+	copy_and_create_as_needed "$srcdir"/MMDVM_HS_Hat 		"$pkgdir"/$prefix/MMDVM_HS_Hat/simplex/ADF7021/14.7456MHz/
+	copy_and_create_as_needed "$srcdir"/MMDVM_HS_Dual_Hat 		"$pkgdir"/$prefix/MMDVM_HS_Hat/duplex/ADF7021/14.7456MHz/
+	copy_and_create_as_needed "$srcdir"/MMDVM_HS_Hat-12mhz 		"$pkgdir"/$prefix/MMDVM_HS_Hat/simplex/ADF7021/12.2880MHz/
+	copy_and_create_as_needed "$srcdir"/MMDVM_HS_Dual_Hat-12mhz 	"$pkgdir"/$prefix/MMDVM_HS_Hat/duplex/ADF7021/12.2880MHz/
 }
 
+sha512sums="
+5eadaa7ca8bbf7aade5930ae6169764c1afc9bec79896bf395ea59835e3f0f4d661d24dd8d8d5f5af3963f5a58345606a9e8cc987c0bbd666665b1a2f16a1509  all.built.images.no.elf.zip
+"

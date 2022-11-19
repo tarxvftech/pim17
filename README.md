@@ -33,6 +33,23 @@ to it in the pim17 docs.
 
 If you get stuck, say something.
 
+## Warnings
+By default the _filesystems_ are quite small. This keeps the downloaded
+images a bit smaller (so as packages get added they may get larger).
+
+You can easily expand the filesystem up to the _partition_ size with `resize2fs /dev/mmcblk0p2`.
+`p2` is the `/` ("root") partition. You can do this live while using
+the filesystem (Mentioned only because you may have encountered other
+resizing options in the past where that was _not_ supported).
+
+You can see partition sizes with `fdisk -l` or `lsblk`. 
+
+You can see partition free space with `df -h`.
+
+The `/data` partition should be the correct and full size already, IIRC. 
+Doing this for `/` can be automated but it's not a priority for me at
+the moment. Pull requests encouraged!
+
 ## on systems that aren't raspberry pis
 You can use almost all the included tools on standard Alpine (docs TODO).
 See the repo files in `input/etc/apk/` for details for now.
@@ -76,6 +93,8 @@ I _think_ ethernet is set to DHCP by default but I'd have to check.
 
 ## Usage
 
+(See also "Warnings" up above).
+
 To log in, `ssh root@pim17`, password is `m17project`. Make sure to change
 that, copy SSH keys over, etc. doas or sudo are your own problem for
 now but I do intend to add a non-root user with doas support eventually.
@@ -90,6 +109,26 @@ against power loss while still allowing easy config file editing and such.
 
 I'd prefer an overlay file system but don't remember why I didn't do
 that to begin with. Not sure I tried, but we should look into that!
+
+To update the list of packages (do early and often):
+```
+apk update
+```
+To install a package:
+```
+apk add
+```
+To upgrade the system ('ware disk space!!):
+```
+apk upgrade
+```
+
+Important (nonstandard) packages:
+```
+mmdvm_firmware_bin: A limited set of organized, precompiled firmware images for common MMDVM modems.
+mmdvm_easyflash: Allows you to 'python -m mmdvm_easyflash' to upgrade firmware on modems supported by mmdvm_firmware_bin.
+m17gateway, mmdvmcal, mmdvmhost: Packaged M17/MMDVM binaries and sample configs as necessary. Check /data/etc for the configs. Might only support M17 to start, more to come if there's demand.
+```
 
 # unsorted and unedited nonsense below here
 
