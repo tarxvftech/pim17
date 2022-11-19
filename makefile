@@ -53,3 +53,6 @@ boot: output/pim17_armhf_edge.img output/pim17_aarch64_edge.img
 	echo Needs console for ttyAMA0 for easy login or it needs qemu-monitor or tweaks to network config or something.
 	#sudo docker run -it -v $(PWD)/output/pim17_armhf_edge.img:/sdcard/filesystem.img lukechilds/dockerpi:vm pi1
 	#sudo docker run -it -v $(PWD)/output/pim17_aarch64_edge.img:/sdcard/filesystem.img lukechilds/dockerpi:vm pi3
+
+prod:
+	rsync -ravz output/* murakumo:/srv/http/alpine.tarxvf.tech/

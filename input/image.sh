@@ -58,6 +58,8 @@ cp "$ROOTFS_PATH"/etc/network/interfaces.alpine-builder "$DATAFS_PATH"/etc/netwo
 mkdir -p $DATAFS_PATH/var/lib/docker/
 
 echo "dtoverlay=disable-bt" >> ${BOOTFS_PATH}/config.txt
+echo "dtparam=audio=on" >> ${BOOTFS_PATH}/config.txt
+echo "snd_bcm2835" >> ${ROOTFS_PATH}/etc/modules-load.d/audio.conf
 #configure wpa_supplicant to check /boot for additional stanzas somehow
 #tiny little logcat type thing for hdmi users
 
