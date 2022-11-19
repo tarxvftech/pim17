@@ -156,12 +156,26 @@ m17gateway, mmdvmcal, mmdvmhost: Packaged M17/MMDVM binaries and sample configs 
 
 
 Ideas:
+automatic HDMI output
 https://github.com/sqshq/sampler
-https://github.com/do6uk/mmdvmdash
-https://github.com/dg9vh/MMDVMHost-Dashboard
+
+80% solution:
+Minimal html page with buttons that can call tiny CGI script
+to restart services. 
+Web-based file manager/editor for people unwilling to CLI.  
+ * https://github.com/prasathmani/tinyfilemanager
+ probably needs to be edited to whitelist specific files. THat's fine!
+MMDVM read-only dashboard. 
+* https://github.com/do6uk/mmdvmdash
+* https://github.com/dg9vh/MMDVMHost-Dashboard
+* https://github.com/dg9vh/MMDVMHost-Websocketboard
+
+
+
 
 ## Important packages
 ```
+https://github.com/F5OEO/rpitx
 * caddy caddy-openrc 
 * rtl-sdr librtlsdr-dev
 * python3
