@@ -78,6 +78,9 @@ pi3 or better). You can ignore the _update.img.
 
 Flash the img to your SD card, standard raspberry pi image instructions
 just like pi-star or raspbian. You'll have to unzip the img first, of course.
+
+You want 'armhf' for the pi0w and anything pi2 or below.  You want aarch64 for pi3 and greater.
+
 ```
 gunzip pim17_armhf_edge.img.gz
 sudo dd if=pim17_armhf_edge.img of=/dev/mmcblk0 bs=4096 status=progress
