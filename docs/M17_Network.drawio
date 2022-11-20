@@ -1,23 +1,31 @@
-<mxfile host="app.diagrams.net" modified="2022-11-20T05:46:41.183Z" agent="5.0 (X11)" etag="j-ISghsBe7lY-afGhdT2" version="20.5.3" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-11-20T05:50:46.133Z" agent="5.0 (X11)" etag="MWI2SYvScDv847SSmq_I" version="20.5.3" type="github" pages="2">
   <diagram id="GIpgCJcC-jVWF7gMhHsp" name="Page-1">
-    <mxGraphModel dx="2755" dy="2628" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="882" dy="1589" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="-9d_PE074A_p4kZVie2n-13" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="30" y="-10" width="410" height="290" as="geometry" />
+          <mxGeometry x="30" y="-10" width="410" height="340" as="geometry" />
         </mxCell>
         <mxCell id="-9d_PE074A_p4kZVie2n-3" value="" style="rounded=1;arcSize=10;strokeColor=none;fillColor=#DBDBDB;gradientColor=none;" vertex="1" parent="-9d_PE074A_p4kZVie2n-13">
-          <mxGeometry y="50" width="410" height="240" as="geometry" />
+          <mxGeometry y="58.620689655172406" width="410" height="281.37931034482756" as="geometry" />
         </mxCell>
         <mxCell id="-9d_PE074A_p4kZVie2n-2" value="&lt;div&gt;Server (Any IP network, including internet or microwave links)&lt;/div&gt;" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image;image=img/lib/active_directory/generic_server.svg;" vertex="1" parent="-9d_PE074A_p4kZVie2n-13">
           <mxGeometry x="160" width="28.000000000000004" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="-9d_PE074A_p4kZVie2n-1" value="&lt;div&gt;DVRef-compatible&lt;/div&gt;&lt;div&gt;Reflector&lt;/div&gt;&lt;br&gt;&lt;div&gt;::17000 (UDP)&lt;/div&gt;" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn4.iconfinder.com/data/icons/ui-office/512/User_Interface-26-128.png" vertex="1" parent="1">
-          <mxGeometry x="297" y="50" width="128" height="128" as="geometry" />
+        <mxCell id="-9d_PE074A_p4kZVie2n-4" value="&lt;div&gt;Reflector Web &lt;br&gt;&lt;/div&gt;&lt;div&gt;Dashboard&lt;/div&gt;&lt;div&gt;(any web server)&lt;br&gt;&lt;/div&gt;&lt;br&gt;&lt;div&gt;::80 / ::443 (TCP)&lt;/div&gt;" style="dashed=0;outlineConnect=0;html=1;align=center;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.weblogos.apache" vertex="1" parent="-9d_PE074A_p4kZVie2n-13">
+          <mxGeometry x="30" y="81.4" width="42.6" height="85.2" as="geometry" />
         </mxCell>
-        <mxCell id="-9d_PE074A_p4kZVie2n-4" value="&lt;div&gt;Reflector Web &lt;br&gt;&lt;/div&gt;&lt;div&gt;Dashboard&lt;/div&gt;&lt;div&gt;(any web server)&lt;br&gt;&lt;/div&gt;&lt;br&gt;&lt;div&gt;::80 / ::443 (TCP)&lt;/div&gt;" style="dashed=0;outlineConnect=0;html=1;align=center;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.weblogos.apache" vertex="1" parent="1">
-          <mxGeometry x="240" y="71.4" width="42.6" height="85.2" as="geometry" />
+        <mxCell id="FWqg4HvqDN0VGGEIyTF8-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;fontSize=20;fontColor=#000000;startArrow=none;startFill=0;endArrow=classic;endFill=1;" edge="1" parent="1" source="-9d_PE074A_p4kZVie2n-1" target="-9d_PE074A_p4kZVie2n-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FWqg4HvqDN0VGGEIyTF8-26" value="Dashboard reads json state" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontColor=#000000;" vertex="1" connectable="0" parent="FWqg4HvqDN0VGGEIyTF8-25">
+          <mxGeometry x="0.1658" y="2" relative="1" as="geometry">
+            <mxPoint x="20" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-9d_PE074A_p4kZVie2n-1" value="&lt;div&gt;DVRef-compatible&lt;/div&gt;&lt;div&gt;Reflector&lt;br&gt;e.g. M17-XVF&lt;br&gt;&lt;/div&gt;&lt;br&gt;&lt;div&gt;::17000 (UDP)&lt;br&gt;(This diagram ignores &lt;br&gt;modules/channels)&lt;br&gt;&lt;/div&gt;" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn4.iconfinder.com/data/icons/ui-office/512/User_Interface-26-128.png" vertex="1" parent="1">
+          <mxGeometry x="297" y="50" width="128" height="128" as="geometry" />
         </mxCell>
         <mxCell id="-9d_PE074A_p4kZVie2n-11" value="" style="group" vertex="1" connectable="0" parent="1">
           <mxGeometry x="570" y="-220.00000000000003" width="450" height="324.75" as="geometry" />
@@ -107,7 +115,7 @@
         <mxCell id="-9d_PE074A_p4kZVie2n-25" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.arc;startAngle=0.7263034288612551;endAngle=0.7829438308915222;fillColor=#A2A39E;strokeWidth=2;" vertex="1" parent="-9d_PE074A_p4kZVie2n-27">
           <mxGeometry x="30" width="100" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="FWqg4HvqDN0VGGEIyTF8-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=48;fontColor=#000000;" edge="1" parent="1" source="FWqg4HvqDN0VGGEIyTF8-11" target="-9d_PE074A_p4kZVie2n-3">
+        <mxCell id="FWqg4HvqDN0VGGEIyTF8-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.197;entryDx=0;entryDy=0;fontSize=48;fontColor=#000000;entryPerimeter=0;" edge="1" parent="1" source="FWqg4HvqDN0VGGEIyTF8-11" target="-9d_PE074A_p4kZVie2n-3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="FWqg4HvqDN0VGGEIyTF8-13" value="&lt;div style=&quot;font-size: 20px;&quot;&gt;DVRef 17000 UDP&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=48;fontColor=#000000;" vertex="1" connectable="0" parent="FWqg4HvqDN0VGGEIyTF8-12">
@@ -121,6 +129,37 @@
         <mxCell id="FWqg4HvqDN0VGGEIyTF8-21" value="DVRef 17000 UDP" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=20;fontColor=#000000;" vertex="1" connectable="0" parent="FWqg4HvqDN0VGGEIyTF8-20">
           <mxGeometry x="0.2721" y="-3" relative="1" as="geometry">
             <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FWqg4HvqDN0VGGEIyTF8-27" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="40" y="490" width="410" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="FWqg4HvqDN0VGGEIyTF8-28" value="" style="rounded=1;arcSize=10;strokeColor=none;fillColor=#DBDBDB;gradientColor=none;" vertex="1" parent="FWqg4HvqDN0VGGEIyTF8-27">
+          <mxGeometry y="58.620689655172406" width="410" height="281.37931034482756" as="geometry" />
+        </mxCell>
+        <mxCell id="FWqg4HvqDN0VGGEIyTF8-29" value="&lt;div&gt;Server (Any IP network, including internet or microwave links)&lt;/div&gt;" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image;image=img/lib/active_directory/generic_server.svg;" vertex="1" parent="FWqg4HvqDN0VGGEIyTF8-27">
+          <mxGeometry x="160" width="28.000000000000004" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="FWqg4HvqDN0VGGEIyTF8-30" value="&lt;div&gt;Reflector Web &lt;br&gt;&lt;/div&gt;&lt;div&gt;Dashboard&lt;/div&gt;&lt;div&gt;(any web server)&lt;br&gt;&lt;/div&gt;&lt;br&gt;&lt;div&gt;::80 / ::443 (TCP)&lt;/div&gt;" style="dashed=0;outlineConnect=0;html=1;align=center;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.weblogos.apache" vertex="1" parent="FWqg4HvqDN0VGGEIyTF8-27">
+          <mxGeometry x="30" y="81.4" width="42.6" height="85.2" as="geometry" />
+        </mxCell>
+        <mxCell id="FWqg4HvqDN0VGGEIyTF8-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;fontSize=20;fontColor=#000000;startArrow=none;startFill=0;endArrow=classic;endFill=1;" edge="1" parent="1" source="FWqg4HvqDN0VGGEIyTF8-33" target="FWqg4HvqDN0VGGEIyTF8-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FWqg4HvqDN0VGGEIyTF8-32" value="Dashboard reads json state" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontColor=#000000;" vertex="1" connectable="0" parent="FWqg4HvqDN0VGGEIyTF8-31">
+          <mxGeometry x="0.1658" y="2" relative="1" as="geometry">
+            <mxPoint x="20" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FWqg4HvqDN0VGGEIyTF8-33" value="&lt;div&gt;DVRef-compatible&lt;/div&gt;&lt;div&gt;Reflector&lt;br&gt;e.g. M17-RTX&lt;br&gt;&lt;/div&gt;&lt;br&gt;&lt;div&gt;::17000 (UDP)&lt;br&gt;(This diagram ignores &lt;br&gt;modules/channels)&lt;br&gt;&lt;/div&gt;" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn4.iconfinder.com/data/icons/ui-office/512/User_Interface-26-128.png" vertex="1" parent="1">
+          <mxGeometry x="307" y="550" width="128" height="128" as="geometry" />
+        </mxCell>
+        <mxCell id="FWqg4HvqDN0VGGEIyTF8-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;fontSize=12;fontColor=#000000;startArrow=classic;startFill=1;endArrow=classic;endFill=1;" edge="1" parent="1" source="-9d_PE074A_p4kZVie2n-3" target="FWqg4HvqDN0VGGEIyTF8-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FWqg4HvqDN0VGGEIyTF8-35" value="DVRef Reflector Linking&lt;br&gt;(per-module basis!)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontColor=#000000;" vertex="1" connectable="0" parent="FWqg4HvqDN0VGGEIyTF8-34">
+          <mxGeometry x="0.1243" y="2" relative="1" as="geometry">
+            <mxPoint x="1" as="offset" />
           </mxGeometry>
         </mxCell>
       </root>
