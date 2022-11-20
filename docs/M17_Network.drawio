@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-11-20T05:51:34.257Z" agent="5.0 (X11)" etag="rONNn1VoOEk5xle72OAo" version="20.5.3" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-11-20T05:53:09.918Z" agent="5.0 (X11)" etag="nG_RdvnU0-43I0azPZvw" version="20.5.3" type="github" pages="2">
   <diagram id="GIpgCJcC-jVWF7gMhHsp" name="Network">
-    <mxGraphModel dx="2204" dy="2322" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1574" dy="1973" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -66,7 +66,7 @@
         <mxCell id="-9d_PE074A_p4kZVie2n-8" value="" style="rounded=1;arcSize=10;strokeColor=none;fillColor=#DBDBDB;gradientColor=none;" vertex="1" parent="-9d_PE074A_p4kZVie2n-12">
           <mxGeometry x="10" y="70" width="420" height="274.75" as="geometry" />
         </mxCell>
-        <mxCell id="-9d_PE074A_p4kZVie2n-5" value="&lt;div&gt;pim17&lt;/div&gt;" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn0.iconfinder.com/data/icons/electronics-line-style/64/Hotspot-128.png" vertex="1" parent="-9d_PE074A_p4kZVie2n-12">
+        <mxCell id="-9d_PE074A_p4kZVie2n-5" value="&lt;div&gt;pim17&lt;/div&gt;&lt;br&gt;MMDVM_HS_Hat" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn0.iconfinder.com/data/icons/electronics-line-style/64/Hotspot-128.png" vertex="1" parent="-9d_PE074A_p4kZVie2n-12">
           <mxGeometry width="70" height="70" as="geometry" />
         </mxCell>
         <mxCell id="FWqg4HvqDN0VGGEIyTF8-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=20;fontColor=#000000;startArrow=classic;startFill=1;endArrow=classic;endFill=1;" edge="1" parent="-9d_PE074A_p4kZVie2n-12" source="FWqg4HvqDN0VGGEIyTF8-14" target="FWqg4HvqDN0VGGEIyTF8-15">
@@ -75,7 +75,7 @@
         <mxCell id="FWqg4HvqDN0VGGEIyTF8-14" value="M17Gateway" style="rounded=1;whiteSpace=wrap;html=1;glass=0;strokeColor=default;strokeWidth=2;fontSize=20;fontColor=#000000;fillColor=none;labelBackgroundColor=default;" vertex="1" parent="-9d_PE074A_p4kZVie2n-12">
           <mxGeometry x="30" y="154" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="FWqg4HvqDN0VGGEIyTF8-17" value="&lt;div&gt;MMDVM_HS_Hat&lt;/div&gt;&lt;div&gt;/dev/ttyAMA0&lt;br&gt;&lt;/div&gt;" style="shape=mxgraph.cisco.modems_and_phones.rf_modem;html=1;pointerEvents=1;dashed=0;fillColor=#036897;strokeColor=#ffffff;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;glass=0;labelBackgroundColor=default;fontSize=20;fontColor=#000000;" vertex="1" parent="-9d_PE074A_p4kZVie2n-12">
+        <mxCell id="FWqg4HvqDN0VGGEIyTF8-17" value="&lt;div&gt;MMDVM_HS_Hat&lt;/div&gt;&lt;div&gt;/dev/ttyAMA0&lt;br&gt;Simplex RF modem ADF7021&lt;br&gt;&lt;/div&gt;" style="shape=mxgraph.cisco.modems_and_phones.rf_modem;html=1;pointerEvents=1;dashed=0;fillColor=#036897;strokeColor=#ffffff;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;glass=0;labelBackgroundColor=default;fontSize=20;fontColor=#000000;" vertex="1" parent="-9d_PE074A_p4kZVie2n-12">
           <mxGeometry x="348" y="298" width="82" height="42" as="geometry" />
         </mxCell>
         <mxCell id="FWqg4HvqDN0VGGEIyTF8-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=20;fontColor=#000000;startArrow=classic;startFill=1;endArrow=classic;endFill=1;" edge="1" parent="-9d_PE074A_p4kZVie2n-12" source="FWqg4HvqDN0VGGEIyTF8-15" target="FWqg4HvqDN0VGGEIyTF8-17">
@@ -97,7 +97,7 @@
             <mxPoint x="-1" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="-9d_PE074A_p4kZVie2n-21" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn2.iconfinder.com/data/icons/web-development-and-studio/512/110_walkie_talkie_communication_radio_camping_camping_camp-128.png;fillColor=#A2A39E;" vertex="1" parent="1">
+        <mxCell id="-9d_PE074A_p4kZVie2n-21" value="MD-UV380 OpenRTX M17 modded" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn2.iconfinder.com/data/icons/web-development-and-studio/512/110_walkie_talkie_communication_radio_camping_camping_camp-128.png;fillColor=#A2A39E;" vertex="1" parent="1">
           <mxGeometry x="1470" y="298" width="128" height="128" as="geometry" />
         </mxCell>
         <mxCell id="-9d_PE074A_p4kZVie2n-27" value="" style="group" vertex="1" connectable="0" parent="1">
