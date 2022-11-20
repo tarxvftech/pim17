@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-11-20T06:04:18.801Z" agent="5.0 (X11)" etag="ZozLvKcwqxs19HjoxOSY" version="20.5.3" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-11-20T06:09:40.841Z" agent="5.0 (X11)" etag="IEO80-bsCk5hceZkTkm7" version="20.5.3" type="github" pages="2">
   <diagram id="GIpgCJcC-jVWF7gMhHsp" name="Network">
-    <mxGraphModel dx="1102" dy="1711" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1574" dy="2021" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -61,22 +61,27 @@
           <mxGeometry x="42" y="110" width="128" height="128" as="geometry" />
         </mxCell>
         <mxCell id="-9d_PE074A_p4kZVie2n-12" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="700" y="40" width="479" height="362" as="geometry" />
+          <mxGeometry x="700" y="-30" width="860" height="520" as="geometry" />
         </mxCell>
         <mxCell id="-9d_PE074A_p4kZVie2n-8" value="" style="rounded=1;arcSize=10;strokeColor=none;fillColor=#DBDBDB;gradientColor=none;" parent="-9d_PE074A_p4kZVie2n-12" vertex="1">
-          <mxGeometry x="10" y="70" width="420" height="274.75" as="geometry" />
+          <mxGeometry x="17.954070981210858" y="100.55248618784532" width="754.070981210856" height="394.66850828729287" as="geometry" />
         </mxCell>
         <mxCell id="-9d_PE074A_p4kZVie2n-5" value="&lt;div&gt;pim17&lt;/div&gt;&lt;br&gt;MMDVM_HS_Hat" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn0.iconfinder.com/data/icons/electronics-line-style/64/Hotspot-128.png" parent="-9d_PE074A_p4kZVie2n-12" vertex="1">
-          <mxGeometry x="40" width="70" height="70" as="geometry" />
+          <mxGeometry x="71.81628392484343" width="70" height="70" as="geometry" />
         </mxCell>
         <mxCell id="FWqg4HvqDN0VGGEIyTF8-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=20;fontColor=#000000;startArrow=classic;startFill=1;endArrow=classic;endFill=1;" parent="-9d_PE074A_p4kZVie2n-12" source="FWqg4HvqDN0VGGEIyTF8-14" target="FWqg4HvqDN0VGGEIyTF8-15" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="FWqg4HvqDN0VGGEIyTF8-14" value="&lt;b&gt;M17Gateway&lt;/b&gt;&lt;br&gt;Reflector chosen by configuration" style="rounded=1;whiteSpace=wrap;html=1;glass=0;strokeColor=default;strokeWidth=2;fontSize=20;fontColor=#000000;fillColor=none;labelBackgroundColor=default;spacingTop=0;spacing=20;" parent="-9d_PE074A_p4kZVie2n-12" vertex="1">
-          <mxGeometry x="30" y="154" width="250" height="86" as="geometry" />
+        <mxCell id="IR3qut0NJrH-z6vsPm5--1" value="UDP MMDVMHost 17011 -&amp;gt; M17GW 17010" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=20;fontColor=#000000;" vertex="1" connectable="0" parent="FWqg4HvqDN0VGGEIyTF8-19">
+          <mxGeometry x="-0.2762" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FWqg4HvqDN0VGGEIyTF8-14" value="&lt;b&gt;M17Gateway&lt;/b&gt;&lt;br&gt;Reflector chosen by configuration&lt;br&gt;::17010" style="rounded=1;whiteSpace=wrap;html=1;glass=0;strokeColor=default;strokeWidth=2;fontSize=20;fontColor=#000000;fillColor=none;labelBackgroundColor=default;spacingTop=0;spacing=20;" parent="-9d_PE074A_p4kZVie2n-12" vertex="1">
+          <mxGeometry x="26.932212943632578" y="157.54546961325968" width="448.8517745302714" height="123.53591160220995" as="geometry" />
         </mxCell>
         <mxCell id="FWqg4HvqDN0VGGEIyTF8-17" value="&lt;div&gt;&lt;b&gt;MMDVM_HS_Hat&lt;/b&gt;&lt;/div&gt;&lt;div&gt;/dev/ttyAMA0&lt;br&gt;Simplex RF modem ADF7021&lt;br&gt;&lt;/div&gt;" style="shape=mxgraph.cisco.modems_and_phones.rf_modem;html=1;pointerEvents=1;dashed=0;fillColor=#036897;strokeColor=#ffffff;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;glass=0;labelBackgroundColor=default;fontSize=20;fontColor=#000000;" parent="-9d_PE074A_p4kZVie2n-12" vertex="1">
-          <mxGeometry x="348" y="298" width="82" height="42" as="geometry" />
+          <mxGeometry x="624.8016701461379" y="428.0662983425415" width="147.22338204592904" height="60.331491712707184" as="geometry" />
         </mxCell>
         <mxCell id="FWqg4HvqDN0VGGEIyTF8-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=20;fontColor=#000000;startArrow=classic;startFill=1;endArrow=classic;endFill=1;" parent="-9d_PE074A_p4kZVie2n-12" source="FWqg4HvqDN0VGGEIyTF8-15" target="FWqg4HvqDN0VGGEIyTF8-17" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -87,7 +92,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="FWqg4HvqDN0VGGEIyTF8-15" value="&lt;div&gt;&lt;b&gt;MMDVMHost&lt;/b&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;glass=0;strokeColor=default;strokeWidth=2;fontSize=20;fontColor=#000000;fillColor=none;labelBackgroundColor=default;" parent="-9d_PE074A_p4kZVie2n-12" vertex="1">
-          <mxGeometry x="15" y="280" width="150" height="60" as="geometry" />
+          <mxGeometry x="116.70110647181629" y="402.2099447513813" width="269.31106471816287" height="86.1878453038674" as="geometry" />
         </mxCell>
         <mxCell id="FWqg4HvqDN0VGGEIyTF8-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.015;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=20;fontColor=#000000;startArrow=classic;startFill=1;endArrow=classic;endFill=1;" parent="1" source="-9d_PE074A_p4kZVie2n-21" target="FWqg4HvqDN0VGGEIyTF8-17" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -98,10 +103,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="-9d_PE074A_p4kZVie2n-21" value="MD-UV380 OpenRTX M17 modded" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn2.iconfinder.com/data/icons/web-development-and-studio/512/110_walkie_talkie_communication_radio_camping_camping_camp-128.png;fillColor=#A2A39E;" parent="1" vertex="1">
-          <mxGeometry x="1470" y="298" width="128" height="128" as="geometry" />
+          <mxGeometry x="1740" y="298" width="128" height="128" as="geometry" />
         </mxCell>
         <mxCell id="-9d_PE074A_p4kZVie2n-27" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="1470" y="260" width="130" height="100" as="geometry" />
+          <mxGeometry x="1740" y="260" width="130" height="100" as="geometry" />
         </mxCell>
         <mxCell id="-9d_PE074A_p4kZVie2n-22" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.arc;startAngle=0.6044340865200333;endAngle=0.8998071947233861;fillColor=#A2A39E;strokeWidth=2;" parent="-9d_PE074A_p4kZVie2n-27" vertex="1">
           <mxGeometry width="100" height="100" as="geometry" />
