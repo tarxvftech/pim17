@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-11-20T05:30:47.516Z" agent="5.0 (X11)" etag="epXDzFRLiXmZQCq1aFQZ" version="20.5.3" type="github">
+<mxfile host="app.diagrams.net" modified="2022-11-20T05:37:00.338Z" agent="5.0 (X11)" etag="mxxgQCdlKeO2K9QO-xKL" version="20.5.3" type="github" pages="2">
   <diagram id="GIpgCJcC-jVWF7gMhHsp" name="Page-1">
-    <mxGraphModel dx="2004" dy="2211" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2449" dy="2458" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -58,8 +58,64 @@
         <mxCell id="-9d_PE074A_p4kZVie2n-5" value="&lt;div&gt;pim17&lt;/div&gt;" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn0.iconfinder.com/data/icons/electronics-line-style/64/Hotspot-128.png" vertex="1" parent="-9d_PE074A_p4kZVie2n-12">
           <mxGeometry width="70" height="70" as="geometry" />
         </mxCell>
+        <mxCell id="FWqg4HvqDN0VGGEIyTF8-6" value="" style="group;rotation=-180;" vertex="1" connectable="0" parent="-9d_PE074A_p4kZVie2n-12">
+          <mxGeometry x="-120" y="-210" width="260" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="FWqg4HvqDN0VGGEIyTF8-7" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.arc;startAngle=0.6044340865200333;endAngle=0.8998071947233861;fillColor=#A2A39E;strokeWidth=2;rotation=-180;" vertex="1" parent="FWqg4HvqDN0VGGEIyTF8-6">
+          <mxGeometry x="320" y="200" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="FWqg4HvqDN0VGGEIyTF8-8" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.arc;startAngle=0.6529287099999843;endAngle=0.8557379197186956;fillColor=#A2A39E;strokeWidth=2;rotation=-180;" vertex="1" parent="FWqg4HvqDN0VGGEIyTF8-6">
+          <mxGeometry x="300" y="200" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="FWqg4HvqDN0VGGEIyTF8-9" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.arc;startAngle=0.6897358070533419;endAngle=0.8125923613305674;fillColor=#A2A39E;strokeWidth=2;rotation=-180;" vertex="1" parent="FWqg4HvqDN0VGGEIyTF8-6">
+          <mxGeometry x="280" y="200" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="FWqg4HvqDN0VGGEIyTF8-10" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.arc;startAngle=0.7263034288612551;endAngle=0.7829438308915222;fillColor=#A2A39E;strokeWidth=2;rotation=-180;" vertex="1" parent="FWqg4HvqDN0VGGEIyTF8-6">
+          <mxGeometry x="260" y="200" width="200" height="200" as="geometry" />
+        </mxCell>
         <mxCell id="-9d_PE074A_p4kZVie2n-21" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn2.iconfinder.com/data/icons/web-development-and-studio/512/110_walkie_talkie_communication_radio_camping_camping_camp-128.png;fillColor=#A2A39E;" vertex="1" parent="1">
-          <mxGeometry x="1330" y="124.75" width="128" height="128" as="geometry" />
+          <mxGeometry x="1340" y="180" width="128" height="128" as="geometry" />
+        </mxCell>
+        <mxCell id="-9d_PE074A_p4kZVie2n-27" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="1310" y="200" width="130" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="-9d_PE074A_p4kZVie2n-22" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.arc;startAngle=0.6044340865200333;endAngle=0.8998071947233861;fillColor=#A2A39E;strokeWidth=2;" vertex="1" parent="-9d_PE074A_p4kZVie2n-27">
+          <mxGeometry width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="-9d_PE074A_p4kZVie2n-23" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.arc;startAngle=0.6529287099999843;endAngle=0.8557379197186956;fillColor=#A2A39E;strokeWidth=2;" vertex="1" parent="-9d_PE074A_p4kZVie2n-27">
+          <mxGeometry x="10" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="-9d_PE074A_p4kZVie2n-24" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.arc;startAngle=0.6897358070533419;endAngle=0.8125923613305674;fillColor=#A2A39E;strokeWidth=2;" vertex="1" parent="-9d_PE074A_p4kZVie2n-27">
+          <mxGeometry x="20" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="-9d_PE074A_p4kZVie2n-25" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.arc;startAngle=0.7263034288612551;endAngle=0.7829438308915222;fillColor=#A2A39E;strokeWidth=2;" vertex="1" parent="-9d_PE074A_p4kZVie2n-27">
+          <mxGeometry x="30" width="100" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="q1ZaIJtIT_LuBtj86BOX" name="Scratch space">
+    <mxGraphModel dx="1102" dy="-489" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="wEM644wXGjv3cYZoPlRB-1" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="210" y="1380" width="130" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="wEM644wXGjv3cYZoPlRB-2" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.arc;startAngle=0.6044340865200333;endAngle=0.8998071947233861;fillColor=#A2A39E;strokeWidth=2;" vertex="1" parent="wEM644wXGjv3cYZoPlRB-1">
+          <mxGeometry width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="wEM644wXGjv3cYZoPlRB-3" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.arc;startAngle=0.6529287099999843;endAngle=0.8557379197186956;fillColor=#A2A39E;strokeWidth=2;" vertex="1" parent="wEM644wXGjv3cYZoPlRB-1">
+          <mxGeometry x="10" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="wEM644wXGjv3cYZoPlRB-4" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.arc;startAngle=0.6897358070533419;endAngle=0.8125923613305674;fillColor=#A2A39E;strokeWidth=2;" vertex="1" parent="wEM644wXGjv3cYZoPlRB-1">
+          <mxGeometry x="20" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="wEM644wXGjv3cYZoPlRB-5" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.arc;startAngle=0.7263034288612551;endAngle=0.7829438308915222;fillColor=#A2A39E;strokeWidth=2;" vertex="1" parent="wEM644wXGjv3cYZoPlRB-1">
+          <mxGeometry x="30" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="wEM644wXGjv3cYZoPlRB-6" value="Scratch space" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#000000;fontSize=48;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry y="1260" width="350" height="70" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
