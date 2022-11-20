@@ -14,6 +14,11 @@ anyone with a hotspot or repeater, but we're a long way from there.
 Forks of piM17 are expected and encouraged. piM17 is intended to be a
 solid base of tools and sane configuration to build the right thing.
 
+## TODO
+* show how to start, restart services (the service files already exist!)
+* add cronjob and instructions for m17hostsupdate
+
+
 ## Values
 Standardization, common tooling, up to date software.
 

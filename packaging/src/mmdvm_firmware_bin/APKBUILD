@@ -2,7 +2,7 @@
 # Maintainer:
 pkgname=mmdvm_firmware_bin
 pkgver=v1.6.0
-pkgrel=1
+pkgrel=3
 pkgdesc="Convenient MMDVM modem firmware images (stored in /srv/fw/)"
 url="https://github.com/tarxvftech/MMDVM_HS_CICD"
 arch="noarch"
@@ -24,10 +24,12 @@ package() {
 	prefix="/usr/share/mmdvm_firmware_bin"
 	mkdir -p "$pkgdir"
 	ls -latr $srcdir
-	copy_and_create_as_needed "$srcdir"/MMDVM_HS_Hat 		"$pkgdir"/$prefix/MMDVM_HS_Hat/simplex/ADF7021/14.7456MHz/
-	copy_and_create_as_needed "$srcdir"/MMDVM_HS_Dual_Hat 		"$pkgdir"/$prefix/MMDVM_HS_Hat/duplex/ADF7021/14.7456MHz/
-	copy_and_create_as_needed "$srcdir"/MMDVM_HS_Hat-12mhz 		"$pkgdir"/$prefix/MMDVM_HS_Hat/simplex/ADF7021/12.2880MHz/
-	copy_and_create_as_needed "$srcdir"/MMDVM_HS_Dual_Hat-12mhz 	"$pkgdir"/$prefix/MMDVM_HS_Hat/duplex/ADF7021/12.2880MHz/
+
+	copy_and_create_as_needed "$srcdir"/MMDVM_HS_Hat 		"$pkgdir"/$prefix/MMDVM_HS_Hat/ADF7021/14.7456MHz/
+	copy_and_create_as_needed "$srcdir"/MMDVM_HS_Hat-12mhz 		"$pkgdir"/$prefix/MMDVM_HS_Hat/ADF7021/12.2880MHz/
+
+	copy_and_create_as_needed "$srcdir"/MMDVM_HS_Dual_Hat 		"$pkgdir"/$prefix/MMDVM_HS_Dual_Hat/ADF7021/14.7456MHz/
+	copy_and_create_as_needed "$srcdir"/MMDVM_HS_Dual_Hat-12mhz 	"$pkgdir"/$prefix/MMDVM_HS_Dual_Hat/ADF7021/12.2880MHz/
 }
 
 sha512sums="

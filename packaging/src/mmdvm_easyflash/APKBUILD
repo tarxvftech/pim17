@@ -1,7 +1,7 @@
 # Contributor: 
 # Maintainer:
 pkgname=mmdvm_easyflash
-pkgver=0.0.5
+pkgver=0.0.6
 #NOTE: Must match what's in pyproject.toml!
 pkgrel=0
 pkgdesc="Best way to flash a limited subset of MMDVM modems and hotspots"
@@ -34,5 +34,5 @@ package() {
 }
 
 sha512sums="
-8dfb0b1596ee75cf639f42cb5b33899ad51ff9b6939c8e9493f4820f90623aa66ee82e4d5196ea621e46bc94c0ae4be03a4fd462f34273dbbaef634b3998ec03  mmdvm_easyflash-0.0.5.tar.gz
+351fc14680d50e4481b4b115b7697070df3ed096cea6ca0cf86d85dc7e98afc72ad34fbfd6aaa64abb39d3f12787ee9a7ecdfe4f7504ccfd1504896134109f59  mmdvm_easyflash-0.0.6.tar.gz
 "
