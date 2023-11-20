@@ -1,5 +1,6 @@
 _Dockerfile*
 upstream/
 packages
+packages_noarch
 .*.swp
 .*.swo

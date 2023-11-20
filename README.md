@@ -17,6 +17,7 @@ solid base of tools and sane configuration to build the right thing.
 ## TODO
 * show how to start, restart services (the service files already exist!)
 * add cronjob and instructions for m17hostsupdate
+* easy way (tailscale?) to allow remote troubleshooting with a single command ideally
 
 
 ## Values
@@ -126,10 +127,11 @@ To install a package:
 ```
 apk add
 ```
-To upgrade the system ('ware disk space!!):
+To upgrade the system ('ware disk space!! And be extra sure / and /boot are mounted rw!):
 ```
 apk upgrade
 ```
+
 
 Important (nonstandard) packages:
 ```
@@ -138,9 +140,42 @@ mmdvm_easyflash: Allows you to 'python -m mmdvm_easyflash' to upgrade firmware o
 m17gateway, mmdvmcal, mmdvmhost: Packaged M17/MMDVM binaries and sample configs as necessary. Check /data/etc for the configs. Might only support M17 to start, more to come if there's demand.
 ```
 
+## Standard openssh
+
+Short form is that dropbear is currently handling ssh and you want to replace it with openssh/sshd.
+Note that you should edit `/etc/ssh/sshd_config` to allow root logins `yes` instead of `without-password` OR add your SSH keys before continuing, lest you be locked out, requiring manual SD card intervention.
+`apk add openssh`
+`rc-update add sshd`
+`rc-update del dropbear`
+`/etc/init.d/dropbear stop`
+`/etc/init.d/sshd start`
+
+
+## Docker
+Make sure `/` is resized and currently rw. Or you can do the following:
+`cd /var/lib; ln -s /data/var/lib/docker` 
+`cd /var/; mkdir /data/var/log; ln -s /data/var/log`
+
+To add it:
+`apk add docker docker-compose`
+`rc-update add docker`
+`/etc/init.d/docker start`
+
+`docker ps -a` to make sure it's working.
+
+## RW / by default
+Edit /etc/fstab and change the `ro` to `rw` for / and /boot. 
+Edit /boot/cmdline.txt and remove the `ro` (I think).
+You're done!
+
 # unsorted and unedited nonsense below here
 
 ## TODO
+
+* [] MMDVM package, MMDVM_HS package renamed to account for that.
+* [] make hostnames unique - pim17-XXXXXX maybe from last three octets of mac address?
+* [] auto calibration of hotspot? with a known-good rtl-sdr, the good ones have excellent clocks
+
 ```
 ✔ - need gcc,binutils,newlib-arm-none-eabi
  master branch, make dvm
@@ -175,7 +210,8 @@ MMDVM read-only dashboard.
 * https://github.com/dg9vh/MMDVMHost-Dashboard
 * https://github.com/dg9vh/MMDVMHost-Websocketboard
 
-
+or much better, w0chp's dash:
+https://repo.w0chp.net/Chipster/W0CHP-PiStar-Dash
 
 
 ## Important packages

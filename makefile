@@ -22,13 +22,11 @@ send:
 #flash: output/pim17_aarch64_edge.img
 flash1: output/pim17_armhf_edge.img
 	sudo dd if=$^ of=/dev/mmcblk0 bs=4096 status=progress
-	echo "Adding wifi settings"
-	sudo mount /dev/mmcblk0p1 /mnt/1
-	sudo cp wifi.txt /mnt/1/wpa_supplicant_additions.txt
-	sudo umount /mnt/1/
-	echo "Done!"
+	make wifisettings
 flash2: output/pim17_aarch64_edge.img
 	sudo dd if=$^ of=/dev/mmcblk0 bs=4096 status=progress
+	make wifisettings
+wifisettings:
 	echo "Adding wifi settings"
 	sudo mount /dev/mmcblk0p1 /mnt/1
 	sudo cp wifi.txt /mnt/1/wpa_supplicant_additions.txt

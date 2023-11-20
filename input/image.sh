@@ -8,11 +8,15 @@ echo Data FS: $DATAFS_PATH
 mkdir -p $DATAFS_PATH/srv
 #mv $ROOTFS_PATH/srv/* $DATAFS_PATH/srv/
 rmdir $ROOTFS_PATH/srv
-ln -s $DATAFS_PATH/srv $ROOTFS_PATH/srv
+ln -s /data/srv $ROOTFS_PATH/srv
+ln -s /data/etc/caddy $ROOTFS_PATH/etc/caddy
 mkdir -p $DATAFS_PATH/srv/http/
 #wget https://m17-protocol-specification.readthedocs.io/_/downloads/en/latest/htmlzip/ -o $DATAFS_PATH/srv/http/
 
 echo "https://alpine.tarxvf.tech/${ALPINE_BRANCH}/" >> $ROOTFS_PATH/etc/apk/repositories
+echo "https://pim17.org/repo/${ALPINE_BRANCH}/" >> $ROOTFS_PATH/etc/apk/repositories
+echo -e "#!/bin/sh\niw wlan0 set power_save off" >> "$ROOTFS_PATH/etc/local.d/wlan0_power_save_off.start"
+chmod a+x "$ROOTFS_PATH/etc/local.d/wlan0_power_save_off.start"
 cp $INPUT_PATH/etc/apk/keys/* $ROOTFS_PATH/etc/apk/keys/
 
 
@@ -25,8 +29,14 @@ chroot_exec apk add --no-cache git \
 	wireless-tools wpa_supplicant \
 	busybox-ifupdown busybox-extras \
 	linux-firmware-cypress \
-	mmdvmhost mmdvmcal m17gateway mmdvm_easyflash mmdvm_firmware_bin \
-	nano
+	python3 py3-pip \
+	mmdvmhost mmdvmcal m17gateway \
+	nano iw 
+
+	#mmdvm_easyflash \
+	#mmdvm_firmware_bin \
+	#mmdvm_hs_firmware_bin \
+	#mtr iperf
 
 mkdir -p $DATAFS_PATH/etc/wpa_supplicant 
 cp -r $ROOTFS_PATH/etc/wpa_supplicant/* $DATAFS_PATH/etc/wpa_supplicant/ 

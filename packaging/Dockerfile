@@ -2,13 +2,11 @@
 #from arm32v7/alpine:latest
 #from alpine
 #as base
+RUN ulimit -Hn && ulimit -Sn
 RUN adduser builder -D #-D is don't assign a password
 RUN echo -e "m17project\nm17project\n" | passwd builder
 RUN addgroup builder wheel
 RUN apk add alpine-sdk git screen vim doas sudo 
-
-#for MMDVM firmware
-RUN apk add newlib-arm-none-eabi binutils-arm-none-eabi gcc-arm-none-eabi
 
 RUN apk add cmake
 

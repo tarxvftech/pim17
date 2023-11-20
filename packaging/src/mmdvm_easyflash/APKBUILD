@@ -30,6 +30,7 @@ package() {
 	cd $builddir
 	ls -altr dist/
 	python3 -m installer -d "$pkgdir" dist/$pkgname-$pkgver-py3-none-any.whl
+	rm -r dist/
 	
 }
 

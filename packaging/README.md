@@ -69,6 +69,8 @@ If you're using the mmdvm_easyflash package, some may be pulled in as a dependen
 
 ## Add:
 # https://wiki.alpinelinux.org/wiki/Creating_an_Alpine_package
+
+Holy cow, instead of making the micro_dash_backend check out https://wiki.alpinelinux.org/wiki/Alpine_Configuration_Framework_Design
 * Kiosk package with firefox kiosk mode
   add user kiosk, passwd doesn't matter
   /etc/inittab tty1 to /bin/login -f kiosk (kiosk username)
@@ -176,3 +178,7 @@ If you're using the mmdvm_easyflash package, some may be pulled in as a dependen
 
 ## Bugs
 
+* [x] faked/fakeroot takes forever closing file descriptors that aren't open when in arm containers run through qemu: ulimit -Hn 524288 && ulimit -Sn 1024 to match my host machine (doens't have to match, just for sane values). in qemu run container it is set to 1073741816 which is a LOT. note that setting ulimit -n will fail on x86_64, so has to only be run on arm platforms to help.
+https://bugs.archlinux.org/task/61566
+https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=920913
+It's not clear to me why setting ulimit fails on arm64 and x86_64, nor why it is required on arm32v6 and v7.
